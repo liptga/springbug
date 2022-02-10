@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @ConditionalOnBean(BeanConditionalOnProperty.class)
-//@Scope(proxyMode = ScopedProxyMode.TARGET_CLASS) //remove this and PropertyDoesNotExistsTest passes
+@Scope(proxyMode = ScopedProxyMode.TARGET_CLASS) //remove this and PropertyDoesNotExistsTest passes
 public class BeanConditionalOnOtherBean {
 	private final BeanConditionalOnProperty beanConditionalOnProperty;
 
